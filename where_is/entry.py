@@ -185,7 +185,7 @@ def where_is_text(target_player: str, pos: Position, dim: Dimension) -> RTextBas
 
     # click event to add waypoint
     if config.display_waypoints.xaeros_minimap:
-        command = "xaero_waypoint_add:{}'s Location:{}:{}:{}:{}:6:false:0".format(
+        command = "xaero_waypoint:{}'s Location:{}:{}:{}:{}:6:false:0".format(
             target_player, target_player[0], int(x), int(y), int(z))
         if isinstance(dim, LegacyDimension):
             command += ':Internal_{}_waypoints'.format(dim.get_reg_key().replace('minecraft:', '').strip())
